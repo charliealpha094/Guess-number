@@ -6,8 +6,11 @@ def guess(x):
     random_number = random.randint(1, x)
     guess = 0
     while guess != random_number:
+        print('Press 12 to quit at any time')
         guess = int(input(f'Please, guess a number between 1 and {x}: '))
-        if guess < random_number:
+        if guess == 12:
+            break
+        elif guess < random_number:
             print('Too low!')
         elif guess > random_number:
             print('Too high!')
